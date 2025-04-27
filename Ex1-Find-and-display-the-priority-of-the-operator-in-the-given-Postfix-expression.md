@@ -1,14 +1,17 @@
 # EX 1 Display operator precedence in the infix expression.
-## DATE:
+## DATE: 26-04-25
 ## AIM:
 To write a C program to find and display the priority of the operator in the given Postfix expression
 
 ## Algorithm
-1. 
-2. 
-3. 
-4.  
-5.   
+1. Start the program.  
+2. Include the required libraries.  
+3. Define a function to return the priority of a given operator.  
+4. Initialize the postfix expression.  
+5. Loop through each character of the expression.  
+6. If the character is an operator, find its priority using the function.  
+7. Print the operator along with its corresponding priority level (Highest, Second Highest, etc.).  
+8. End the program.
 
 ## Program:
 ```
