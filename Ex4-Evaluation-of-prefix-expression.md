@@ -20,13 +20,46 @@ Program to evaluate the given prefix expression
 Developed by: Varadaram SK
 RegisterNumber:  212223040232
 */
-Start the program.
-Check if n is greater than 0.
-Recursively move n-1 disks from source (x) to auxiliary (z) using destination (y).
-Print the move of the n-th disk from source (x) to destination (y).
-Recursively move n-1 disks from auxiliary (z) to destination (y) using source (x).
-The function is called initially with TOH(n, 'A', 'B', 'C') where 'A', 'B', and 'C' are the rods.
-End
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+#define MAX 100  
+
+void evalprefix(char* expr) {
+    int stack[MAX]; 
+    int top = -1;   
+
+    int length = strlen(expr);
+
+    
+    for (int i = length - 1; i >= 0; i--) {
+        char ch = expr[i];
+
+        
+        if (isdigit(ch)) {
+            stack[++top] = ch - '0'; 
+        }
+        
+        else if (ch == '*' || ch == '-') {
+            int operand1 = stack[top--]; 
+            int operand2 = stack[top--]; 
+
+            int result = 0;
+            if (ch == '*') {
+                result = operand1 * operand2;  
+            } else if (ch == '-') {
+                result = operand1 - operand2;  
+            }
+
+            stack[++top] = result;
+        }
+    }
+
+    
+    int finalResult = stack[top];
+    printf("%d\n", finalResult);
+}
 ```
 
 ## Output:
