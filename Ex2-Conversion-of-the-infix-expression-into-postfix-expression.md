@@ -20,7 +20,7 @@ Program to convert the infix expression into postfix expression
 Developed by: Varadaram SK
 RegisterNumber: 212223040232  
 */
-```
+
 #include <limits.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -131,7 +131,7 @@ void IntoPost(char* expression)
     printf("\n");
 }
 
-
+```
 ## Output:
 
 ![image](https://github.com/user-attachments/assets/93cb3e73-9a2b-4ce0-9f2e-e1694caff31f)
